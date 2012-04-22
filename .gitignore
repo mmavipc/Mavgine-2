@@ -1,6 +1,6 @@
 #Compiled stuff
-Debug/*
-Release/*
+Debug/
+Release/
 
 # Visual studio junk
 *.suo
