@@ -86,10 +86,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Engine\Engine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h" />
     <ClInclude Include="CoreExport.h" />
+    <ClInclude Include="Engine\Engine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
