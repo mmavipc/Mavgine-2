@@ -1,12 +1,10 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
+#Compiled stuff
+Debug/*
+Release/*
 
-# Compiled Dynamic libraries
-*.so
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+# Visual studio junk
+*.suo
+*.vcxproj.user
+*.sdf
+*.opensdf
+*.ipch
