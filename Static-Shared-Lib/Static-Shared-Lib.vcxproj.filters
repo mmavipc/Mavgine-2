@@ -13,33 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Engine">
-      <UniqueIdentifier>{f32a263c-b7e7-45de-b162-17056567200e}</UniqueIdentifier>
+    <Filter Include="Source Files\OS Abstraction">
+      <UniqueIdentifier>{78b5d01c-5b9a-40ab-b8c4-f827176ceab9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine">
-      <UniqueIdentifier>{028b3499-3b1f-4a9d-9c5e-f249ec9c3e77}</UniqueIdentifier>
+    <Filter Include="Header Files\OS Abstraction">
+      <UniqueIdentifier>{49fc3989-9ca8-4984-bce6-8995950c1357}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine\Engine.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
+    <ClInclude Include="OSAbstraction\OSAbstraction.h">
+      <Filter>Header Files\OS Abstraction</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CoreExport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Engine.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
+    <ClCompile Include="OSAbstraction\OSAbstraction.cpp">
+      <Filter>Source Files\OS Abstraction</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
