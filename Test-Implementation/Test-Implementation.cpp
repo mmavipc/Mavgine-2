@@ -9,7 +9,7 @@
 #include <Windows.h>
 #endif
 
-typedef void*(*GetEnginePtr)();
+typedef void*(*GetEnginePtr)(const std::string &strVersion);
 
 int main(int argc, char* argv[])
 {
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 		pGetEngineFunc = (GetEnginePtr)GetProcAddress(hCoreDLL, "GetEngine");
 	#endif
 
-	Mavgine2::Engine *pEngine = (Mavgine2::Engine*)pGetEngineFunc();
+	Mavgine2::Engine *pEngine = (Mavgine2::Engine*)pGetEngineFunc(EXPECTEDENGINEVERSION);
 	pEngine->Initialize("Test Implementation", 33);
 
 	Mavgine2::GetOSInterface()->MsgBox("Hello", "World!", Mavgine2::NORMAL);

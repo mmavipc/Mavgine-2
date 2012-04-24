@@ -8,7 +8,7 @@ namespace Mavgine2
 {
 	class Engine
 	{
-		friend void* ::GetEngine();
+		friend void* ::GetEngine(const std::string &strVersion);
 
 		public:
 			virtual void Initialize(const std::string &strGameName, const unsigned int uiTickRate);
