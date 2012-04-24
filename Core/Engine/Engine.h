@@ -2,13 +2,22 @@
 #define ENGINE_H
 
 #include <string>
+#include "..\Core.h"
 
 namespace Mavgine2
 {
 	class Engine
 	{
+		friend void* ::GetEngine();
+
 		public:
-			virtual void Initialize(const std::string &strGameName);
+			virtual void Initialize(const std::string &strGameName, const unsigned int uiTickRate);
+			virtual void EndGame();
+
+		private:
+			Engine();
+			~Engine();
+			unsigned int m_uiTickRate;
 	};
 };
 

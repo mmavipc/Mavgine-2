@@ -20,6 +20,6 @@ int main(int argc, char* argv[])
 	#endif
 
 	Mavgine2::Engine *pEngine = (Mavgine2::Engine*)pGetEngineFunc();
-	pEngine->Initialize("Test Implementation");
+	pEngine->Initialize("Test Implementation", 33);
 	return 0;
 }

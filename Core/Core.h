@@ -3,6 +3,7 @@
 
 #include "CoreExport.h"
 
+//namespace C
 extern "C"
 {
 	COREEXPORT void* GetEngine();
