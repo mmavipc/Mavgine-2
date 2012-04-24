@@ -17,6 +17,13 @@ Mavgine2::OSInterface* Mavgine2::GetOSInterface()
 	return g_osi;
 }
 
+Mavgine2::WinInterface::WinInterface()
+{
+}
+Mavgine2::WinInterface::~WinInterface()
+{
+}
+
 void Mavgine2::WinInterface::MsgBox(const std::string &strTitle, const std::string &strText, const MsgBoxType &msgType)
 {
 	switch(msgType)

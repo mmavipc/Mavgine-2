@@ -3,6 +3,7 @@
 
 #include <Core\Core.h>
 #include <Core\Engine\Engine.h>
+#include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -21,5 +22,9 @@ int main(int argc, char* argv[])
 
 	Mavgine2::Engine *pEngine = (Mavgine2::Engine*)pGetEngineFunc();
 	pEngine->Initialize("Test Implementation", 33);
+
+	Mavgine2::GetOSInterface()->MsgBox("Hello", "World!", Mavgine2::NORMAL);
+	Mavgine2::GetOSInterface()->MsgBox("Hello", "World!", Mavgine2::ALERT);
+	Mavgine2::GetOSInterface()->MsgBox("Hello", "World!", Mavgine2::ERRORMSG);
 	return 0;
 }
