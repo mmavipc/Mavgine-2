@@ -23,3 +23,13 @@ void Mavgine2::Engine::EndGame()
 	exit(0);
 #endif
 }
+
+int Mavgine2::Engine::LoadPlugin(const std::string &strName)
+{
+	return -1;
+};
+
+bool Mavgine2::Engine::UnloadPlugin(const int &id)
+{
+	return false;
+}

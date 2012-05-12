@@ -14,6 +14,9 @@ namespace Mavgine2
 			virtual void Initialize(const std::string &strGameName, const unsigned int uiTickRate);
 			virtual void EndGame();
 
+			virtual int LoadPlugin(const std::string &strName);
+			virtual bool UnloadPlugin(const int &id);
+
 		private:
 			Engine();
 			~Engine();

@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{028b3499-3b1f-4a9d-9c5e-f249ec9c3e77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Plugin">
+      <UniqueIdentifier>{8e992735-11d0-422e-9c84-05014a4bf76f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plugin">
+      <UniqueIdentifier>{45db8a05-0ffa-4568-aa6d-93cd67624d12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core.cpp">
@@ -30,6 +36,9 @@
     <ClCompile Include="Engine\Engine.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Plugin\PluginManager.cpp">
+      <Filter>Source Files\Plugin</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoreExport.h">
@@ -40,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="Engine\Engine.h">
       <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Plugin\Plugin.h">
+      <Filter>Header Files\Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="Plugin\PluginManager.h">
+      <Filter>Header Files\Plugin</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

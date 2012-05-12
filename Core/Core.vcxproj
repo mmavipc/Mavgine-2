@@ -90,11 +90,14 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Plugin\PluginManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h" />
     <ClInclude Include="CoreExport.h" />
     <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Plugin\Plugin.h" />
+    <ClInclude Include="Plugin\PluginManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
