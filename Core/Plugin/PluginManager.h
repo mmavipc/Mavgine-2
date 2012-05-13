@@ -14,6 +14,8 @@ namespace Mavgine2
 		private:
 			PluginManager();
 			~PluginManager();
+
+
 	};
 };
 

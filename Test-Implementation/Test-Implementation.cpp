@@ -2,7 +2,7 @@
 //
 
 #include <Core\Core.h>
-#include <Core\Engine\Engine.h>
+#include <Core\Engine\IEngine.h>
 #include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
 
 #ifdef _WIN32
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 		pGetEngineFunc = (GetEnginePtr)GetProcAddress(hCoreDLL, "GetEngine");
 	#endif
 
-	Mavgine2::Engine *pEngine = (Mavgine2::Engine*)pGetEngineFunc(EXPECTEDENGINEVERSION);
+	Mavgine2::IEngine *pEngine = (Mavgine2::IEngine*)pGetEngineFunc(EXPECTEDENGINEVERSION);
 	pEngine->Initialize("Test Implementation", 33);
 
 	Mavgine2::GetOSInterface()->MsgBox("Hello", "World!", Mavgine2::NORMAL);

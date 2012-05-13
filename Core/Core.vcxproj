@@ -89,13 +89,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\CEngine.cpp" />
     <ClCompile Include="Plugin\PluginManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h" />
     <ClInclude Include="CoreExport.h" />
-    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\CEngine.h" />
+    <ClInclude Include="Engine\IEngine.h" />
     <ClInclude Include="Plugin\Plugin.h" />
     <ClInclude Include="Plugin\PluginManager.h" />
   </ItemGroup>

@@ -33,11 +33,11 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Engine.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Plugin\PluginManager.cpp">
       <Filter>Source Files\Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\CEngine.cpp">
+      <Filter>Source Files\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,14 +47,17 @@
     <ClInclude Include="Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Engine.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Plugin\Plugin.h">
       <Filter>Header Files\Plugin</Filter>
     </ClInclude>
     <ClInclude Include="Plugin\PluginManager.h">
       <Filter>Header Files\Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\IEngine.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\CEngine.h">
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

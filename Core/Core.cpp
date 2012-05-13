@@ -2,10 +2,10 @@
 //
 
 #include "Core.h"
-#include "Engine\Engine.h"
+#include "Engine\CEngine.h"
 #include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
 
-Mavgine2::Engine* g_engine = NULL;
+Mavgine2::CEngine* g_engine = NULL;
 
 void* GetEngine(const std::string &strVersion)
 {
@@ -16,7 +16,7 @@ void* GetEngine(const std::string &strVersion)
 	}
 	if(g_engine == NULL)
 	{
-		g_engine = new Mavgine2::Engine;
+		g_engine = new Mavgine2::CEngine;
 		return g_engine;
 	}
 	return g_engine;
