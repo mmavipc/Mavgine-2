@@ -16,17 +16,19 @@ namespace Mavgine2
 	{
 		public:
 			virtual void MsgBox(const std::string &strTitle, const std::string &strText, const MsgBoxType &msgType) = 0;
+			virtual void* LoadLibAndGetFunc(std::string strLibName, const char* szFuncName) = 0;
 	};
 
-	OSInterface* GetOSInterface();
+	OSInterface* GetOSI();
 
 	class WinInterface : public OSInterface
 	{
 		public:
 			virtual void MsgBox(const std::string &strTitle, const std::string &strText, const MsgBoxType &msgType);
+			virtual void* LoadLibAndGetFunc(std::string strLibName, const char* szFuncName);
 		
 		private:
-			friend Mavgine2::OSInterface* Mavgine2::GetOSInterface();
+			friend Mavgine2::OSInterface* Mavgine2::GetOSI();
 			WinInterface();
 			~WinInterface();
 	};

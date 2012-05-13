@@ -14,7 +14,9 @@ namespace Mavgine2
 		public:
 			virtual PluginType PluginLoaded() = 0;
 			virtual void PluginUnloaded() = 0;
-	}
-}
+	};
+
+	typedef Plugin* (*PluginInitFunc)();
+};
 
 #endif

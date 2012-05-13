@@ -4,6 +4,7 @@
 #include <string>
 #include "IEngine.h"
 #include "..\Core.h"
+#include "..\Plugin\PluginManager.h"
 
 namespace Mavgine2
 {
