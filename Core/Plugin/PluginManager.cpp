@@ -22,7 +22,7 @@ Mavgine2::PluginManager::~PluginManager()
 
 int Mavgine2::PluginManager::LoadPlugin(const std::string &strName)
 {
-	Mavgine2::PluginInitFunc piFunc = (Mavgine2::PluginInitFunc)Mavgine2::GetOSI()->LoadLibAndGetFunc(strName.c_str(), "PluginInit");
+	Mavgine2::PluginInitFunc piFunc = (Mavgine2::PluginInitFunc)Mavgine2::GetOSI()->LoadLibAndGetFunc(strName, "PluginInit");
 	Mavgine2::Plugin *newPlugin = NULL;
 
 	if(!piFunc)
