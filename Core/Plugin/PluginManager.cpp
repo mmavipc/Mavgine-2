@@ -32,7 +32,7 @@ int Mavgine2::PluginManager::LoadPlugin(const std::string &strName)
 	}
 
 	newPlugin = piFunc((IEngine*)GetEngine(EXPECTEDENGINEVERSION));
-	if(!newPlugin)
+	if(!newPlugin || newPlugin->PluginLoaded() == PT_ERROR_LOADING)
 	{
 		return -1;
 	}

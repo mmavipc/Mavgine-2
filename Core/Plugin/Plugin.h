@@ -8,6 +8,7 @@ namespace Mavgine2
 	//Never move things around in this, lest ye break existing plugins
 	enum PluginType
 	{
+		PT_ERROR_LOADING = -1,
 		PT_GENERIC = 0
 	};
 
