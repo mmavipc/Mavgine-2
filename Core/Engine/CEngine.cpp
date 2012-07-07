@@ -26,7 +26,7 @@ void Mavgine2::CEngine::EndGame()
 
 int Mavgine2::CEngine::LoadPlugin(const std::string &strName)
 {
-	return -1;
+	return PluginManager::GetSingleton()->LoadPlugin(strName);
 };
 
 bool Mavgine2::CEngine::UnloadPlugin(const int &id)
