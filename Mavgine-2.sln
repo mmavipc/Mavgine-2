@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Static-Shared-Lib", "Static-Shared-Lib\Static-Shared-Lib.vcxproj", "{C52F5B94-58A7-418A-A5C2-19DA2F9395F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dummy Plugin", "Dummy Plugin\Dummy Plugin.vcxproj", "{49E4AB12-FAFF-46CD-87C3-B45B55E9096F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -25,6 +27,10 @@ Global
 		{C52F5B94-58A7-418A-A5C2-19DA2F9395F7}.Debug|Win32.Build.0 = Debug|Win32
 		{C52F5B94-58A7-418A-A5C2-19DA2F9395F7}.Release|Win32.ActiveCfg = Release|Win32
 		{C52F5B94-58A7-418A-A5C2-19DA2F9395F7}.Release|Win32.Build.0 = Release|Win32
+		{49E4AB12-FAFF-46CD-87C3-B45B55E9096F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{49E4AB12-FAFF-46CD-87C3-B45B55E9096F}.Debug|Win32.Build.0 = Debug|Win32
+		{49E4AB12-FAFF-46CD-87C3-B45B55E9096F}.Release|Win32.ActiveCfg = Release|Win32
+		{49E4AB12-FAFF-46CD-87C3-B45B55E9096F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
