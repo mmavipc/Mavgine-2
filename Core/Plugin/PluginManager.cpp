@@ -37,7 +37,7 @@ int Mavgine2::PluginManager::LoadPlugin(const std::string &strName)
 		return -1;
 	}
 
-	bool bReachedEnd = true;
+	bool bReachedEnd = false;
 	unsigned int uiIndex = 0;
 	for(unsigned int i = 0; i < m_vecPlugins.size(); i++)
 	{
