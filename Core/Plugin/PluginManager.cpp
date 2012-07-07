@@ -57,8 +57,8 @@ int Mavgine2::PluginManager::LoadPlugin(const std::string &strName)
 	else
 	{
 		m_vecPlugins.resize(m_vecPlugins.size()+1);
-		m_vecPlugins[m_vecPlugins.size()-2] = newPlugin;
-		return m_vecPlugins.size()-2;
+		m_vecPlugins[m_vecPlugins.size()-1] = newPlugin;
+		return m_vecPlugins.size()-1;
 	}
 
 	return -1;
