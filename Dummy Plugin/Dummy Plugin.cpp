@@ -35,7 +35,7 @@ class DummyPlugin : public Mavgine2::Plugin
 
 DummyPlugin *g_Dummy = NULL;
 
-__declspec(dllexport) Mavgine2::Plugin* PluginInit(Mavgine2::IEngine *pEngine)
+extern "C" __declspec(dllexport) Mavgine2::Plugin* PluginInit(Mavgine2::IEngine *pEngine)
 {
 	if(!g_Dummy)
 	{
