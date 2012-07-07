@@ -1,6 +1,8 @@
 #ifndef PLUGIN_H
 #define PLUGIN_H
 
+#include "..\Engine\IEngine.h"
+
 namespace Mavgine2
 {
 	//Never move things around in this, lest ye break existing plugins
@@ -16,7 +18,7 @@ namespace Mavgine2
 			virtual void PluginUnloaded() = 0;
 	};
 
-	typedef Plugin* (*PluginInitFunc)();
+	typedef Plugin* (*PluginInitFunc)(IEngine *pEngine);
 };
 
 #endif

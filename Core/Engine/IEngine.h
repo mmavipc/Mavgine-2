@@ -1,6 +1,8 @@
 #ifndef IENGINE_H
 #define IENGINE_H
 
+#include <string>
+
 namespace Mavgine2
 {
 	class IEngine

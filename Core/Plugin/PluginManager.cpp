@@ -1,5 +1,6 @@
 #include "PluginManager.h"
 #include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
+#include "..\Core.h"
 
 Mavgine2::PluginManager *g_pluginMgr = NULL;
 
@@ -30,7 +31,7 @@ int Mavgine2::PluginManager::LoadPlugin(const std::string &strName)
 		return -1;
 	}
 
-	newPlugin = piFunc();
+	newPlugin = piFunc((IEngine*)GetEngine(EXPECTEDENGINEVERSION));
 	if(!newPlugin)
 	{
 		return -1;
