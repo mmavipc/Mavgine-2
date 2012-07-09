@@ -24,6 +24,7 @@ namespace Mavgine2
 			virtual void Tick();
 
 			virtual double GetEngineTime();
+			virtual double GetRealTime();
 
 			virtual EngineStatus GetStatus();
 		private:
@@ -33,6 +34,7 @@ namespace Mavgine2
 			double m_dLastTick;
 
 			clock_t m_engineStartClock;
+			double m_dEngineTime;
 
 			EngineStatus m_engineStatus;
 	};

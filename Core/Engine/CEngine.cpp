@@ -1,7 +1,7 @@
 #include "CEngine.h"
 
 Mavgine2::CEngine::CEngine() : m_uiTickRate(0), m_engineStartClock(clock()),
-	m_engineStatus(ES_INIT), m_dLastTick(0)
+	m_engineStatus(ES_INIT), m_dLastTick(0), m_dEngineTime(0)
 {
 }
 
@@ -35,9 +35,9 @@ bool Mavgine2::CEngine::UnloadPlugin(const int &id)
 
 bool Mavgine2::CEngine::ShouldTick()
 {
-	static double dTickTime = 1.0/double(m_uiTickRate);
+	static const double dTickTime = 1.0/double(m_uiTickRate);
 
-	if(GetEngineTime()-m_dLastTick > dTickTime)
+	if(GetRealTime()-m_dLastTick > dTickTime)
 	{
 		return true;
 	}
@@ -48,10 +48,19 @@ bool Mavgine2::CEngine::ShouldTick()
 void Mavgine2::CEngine::Tick()
 {
 	PluginManager::GetSingleton()->TickPlugins();
-	m_dLastTick = GetEngineTime();
+
+	static const double dTickTime = 1.0/double(m_uiTickRate);
+	m_dEngineTime += dTickTime;
+
+	m_dLastTick = GetRealTime();
 }
 
 double Mavgine2::CEngine::GetEngineTime()
+{
+	return m_dEngineTime;
+}
+
+double Mavgine2::CEngine::GetRealTime()
 {
 	return double(clock() - m_engineStartClock)/double(CLOCKS_PER_SEC);
 }
