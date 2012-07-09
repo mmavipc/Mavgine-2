@@ -47,6 +47,7 @@ bool Mavgine2::CEngine::ShouldTick()
 
 void Mavgine2::CEngine::Tick()
 {
+	PluginManager::GetSingleton()->TickPlugins();
 	m_dLastTick = GetEngineTime();
 }
 

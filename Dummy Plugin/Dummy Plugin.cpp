@@ -59,6 +59,17 @@ class DummyPlugin : public Mavgine2::Plugin
 			return false;
 		}
 
+		bool Ticks()
+		{
+			//true if plugin should get ticked false if not.
+			return true;
+		}
+
+		void Tick()
+		{
+			//Whee this plugin just ticked
+		}
+
 	private:
 		Mavgine2::IEngine *m_pEngine;
 		bool m_bInitSuccess;

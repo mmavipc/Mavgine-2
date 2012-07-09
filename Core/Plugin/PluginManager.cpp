@@ -74,3 +74,16 @@ bool Mavgine2::PluginManager::UnloadPlugin(const int &id)
 	}
 	return false;
 }
+
+void Mavgine2::PluginManager::TickPlugins()
+{
+	for(unsigned int i = 0; i < m_vecPlugins.size(); i++)
+	{
+		if(m_vecPlugins[i])
+		{
+			unsigned int uiLockCode = m_vecPlugins[i]->GetLock();
+			m_vecPlugins[i]->Tick();
+			m_vecPlugins[i]->ReleaseLock(uiLockCode);
+		}
+	}
+}

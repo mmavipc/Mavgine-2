@@ -20,6 +20,9 @@ namespace Mavgine2
 
 			virtual unsigned int GetLock() = 0;
 			virtual bool ReleaseLock(const unsigned int &uiLockCode) = 0;
+
+			virtual bool Ticks() = 0;
+			virtual void Tick() = 0;
 	};
 
 	typedef Plugin* (*PluginInitFunc)(IEngine *pEngine);
