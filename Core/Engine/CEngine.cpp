@@ -1,9 +1,6 @@
 #include "CEngine.h"
-#ifdef _WIN32
-//#include <Windows.h>
-#endif
 
-Mavgine2::CEngine::CEngine() : m_uiTickRate(0)
+Mavgine2::CEngine::CEngine() : m_uiTickRate(0), m_engineStartClock(clock())
 {
 }
 
@@ -32,4 +29,27 @@ int Mavgine2::CEngine::LoadPlugin(const std::string &strName)
 bool Mavgine2::CEngine::UnloadPlugin(const int &id)
 {
 	return PluginManager::GetSingleton()->UnloadPlugin(id);
+}
+
+bool Mavgine2::CEngine::ShouldTick()
+{
+	static double dTickTime = 1.0/double(m_uiTickRate);
+	static double dLastTick = 0;
+
+	if(GetEngineTime()-dLastTick > dTickTime)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+void Mavgine2::CEngine::Tick()
+{
+	//Nothing to tick yet
+}
+
+double Mavgine2::CEngine::GetEngineTime()
+{
+	return double(clock() - m_engineStartClock)/double(CLOCKS_PER_SEC);
 }

@@ -2,6 +2,7 @@
 #define CENGINE_H
 
 #include <string>
+#include <ctime>
 #include "IEngine.h"
 #include "..\Core.h"
 #include "..\Plugin\PluginManager.h"
@@ -19,10 +20,17 @@ namespace Mavgine2
 			virtual int LoadPlugin(const std::string &strName);
 			virtual bool UnloadPlugin(const int &id);
 
+			virtual bool ShouldTick();
+			virtual void Tick();
+
+			virtual double GetEngineTime();
+
 		private:
 			CEngine();
 			~CEngine();
 			unsigned int m_uiTickRate;
+
+			clock_t m_engineStartClock;
 	};
 }
 
