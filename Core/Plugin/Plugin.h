@@ -17,6 +17,9 @@ namespace Mavgine2
 		public:
 			virtual PluginType PluginLoaded() = 0;
 			virtual void PluginUnloaded() = 0;
+
+			virtual unsigned int GetLock() = 0;
+			virtual bool ReleaseLock(const unsigned int &uiLockCode) = 0;
 	};
 
 	typedef Plugin* (*PluginInitFunc)(IEngine *pEngine);

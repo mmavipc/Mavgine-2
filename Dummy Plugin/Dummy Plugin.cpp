@@ -1,12 +1,16 @@
 // Dummy Plugin.cpp : Defines the exported functions for the DLL application.
 //
+//It's up to plugins to make themselves crossplatform
+#define WIN32_LAN_AND_MEAN
+#include <Windows.h>
 
 #include "..\Core\Plugin\Plugin.h"
 
 class DummyPlugin : public Mavgine2::Plugin
 {
 	public:
-		DummyPlugin(Mavgine2::IEngine *pEngine) : m_pEngine(pEngine), m_bInitSuccess(false)
+		DummyPlugin(Mavgine2::IEngine *pEngine) : m_pEngine(pEngine), m_bInitSuccess(false), m_uiLockCode(0),
+			m_bLocked(false), m_bWaitingForLock(false)
 		{
 			if(pEngine)
 			{
@@ -25,12 +29,43 @@ class DummyPlugin : public Mavgine2::Plugin
 
 		void PluginUnloaded()
 		{
+			while(m_bWaitingForLock)
+			{
+				Sleep(10);
+			}
 			delete this;
+		}
+
+		unsigned int GetLock()
+		{
+			while(m_bLocked)
+			{
+				m_bWaitingForLock = true;
+				Sleep(10);
+			}
+			m_uiLockCode = rand();
+			m_bLocked = true;
+			m_bWaitingForLock = false;
+			return m_uiLockCode;
+		}
+
+		bool ReleaseLock(const unsigned int &uiLockCode)
+		{
+			if(uiLockCode == m_uiLockCode)
+			{
+				m_bLocked = false;
+				return true;
+			}
+			return false;
 		}
 
 	private:
 		Mavgine2::IEngine *m_pEngine;
 		bool m_bInitSuccess;
+
+		unsigned int m_uiLockCode;
+		bool m_bLocked;
+		bool m_bWaitingForLock;
 };
 
 DummyPlugin *g_Dummy = NULL;
