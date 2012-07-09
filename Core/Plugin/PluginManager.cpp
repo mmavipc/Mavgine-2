@@ -63,3 +63,14 @@ int Mavgine2::PluginManager::LoadPlugin(const std::string &strName)
 
 	return -1;
 }
+
+bool Mavgine2::PluginManager::UnloadPlugin(const int &id)
+{
+	if(m_vecPlugins[id])
+	{
+		m_vecPlugins[id]->PluginUnloaded();
+		m_vecPlugins[id] = NULL;
+		return true;
+	}
+	return false;
+}

@@ -22,7 +22,11 @@ int main(int argc, char* argv[])
 
 	Mavgine2::IEngine *pEngine = (Mavgine2::IEngine*)pGetEngineFunc(EXPECTEDENGINEVERSION);
 	pEngine->Initialize("Test Implementation", 33);
-	pEngine->LoadPlugin("Dummy");
+	int iDummyPlugin = pEngine->LoadPlugin("Dummy");
+	if(iDummyPlugin != -1)
+	{
+		pEngine->UnloadPlugin(iDummyPlugin);
+	}
 
 	Mavgine2::GetOSI()->MsgBox("Hello", "World!", Mavgine2::NORMAL);
 	Mavgine2::GetOSI()->MsgBox("Hello", "World!", Mavgine2::ALERT);

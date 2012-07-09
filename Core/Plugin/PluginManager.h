@@ -14,6 +14,7 @@ namespace Mavgine2
 		public:
 			static PluginManager* GetSingleton();
 			int LoadPlugin(const std::string &strName);
+			bool UnloadPlugin(const int &id);
 
 		private:
 			PluginManager();

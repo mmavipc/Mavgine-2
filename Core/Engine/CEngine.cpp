@@ -31,5 +31,5 @@ int Mavgine2::CEngine::LoadPlugin(const std::string &strName)
 
 bool Mavgine2::CEngine::UnloadPlugin(const int &id)
 {
-	return false;
+	return PluginManager::GetSingleton()->UnloadPlugin(id);
 }
