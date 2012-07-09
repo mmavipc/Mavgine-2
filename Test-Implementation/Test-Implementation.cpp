@@ -31,5 +31,17 @@ int main(int argc, char* argv[])
 	Mavgine2::GetOSI()->MsgBox("Hello", "World!", Mavgine2::NORMAL);
 	Mavgine2::GetOSI()->MsgBox("Hello", "World!", Mavgine2::ALERT);
 	Mavgine2::GetOSI()->MsgBox("Hello", "World!", Mavgine2::ERRORMSG);
+
+	while(pEngine->GetStatus() == Mavgine2::ES_INIT)
+	{
+	}
+
+	while(pEngine->GetStatus() == Mavgine2::ES_RUN)
+	{
+		if(pEngine->ShouldTick())
+		{
+			pEngine->Tick();
+		}
+	}
 	return 0;
 }

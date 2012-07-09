@@ -30,6 +30,7 @@ namespace Mavgine2
 			CEngine();
 			~CEngine();
 			unsigned int m_uiTickRate;
+			double m_dLastTick;
 
 			clock_t m_engineStartClock;
 

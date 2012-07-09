@@ -3,15 +3,15 @@
 
 #include <string>
 
-enum EngineStatus
-{
-	ES_INIT = 0,
-	ES_RUN,
-	ES_SHUTDOWN
-};
-
 namespace Mavgine2
 {
+	enum EngineStatus
+	{
+		ES_INIT = 0,
+		ES_RUN,
+		ES_SHUTDOWN
+	};
+
 	class IEngine
 	{
 		public:
