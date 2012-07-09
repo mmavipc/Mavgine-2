@@ -25,12 +25,15 @@ namespace Mavgine2
 
 			virtual double GetEngineTime();
 
+			virtual EngineStatus GetStatus();
 		private:
 			CEngine();
 			~CEngine();
 			unsigned int m_uiTickRate;
 
 			clock_t m_engineStartClock;
+
+			EngineStatus m_engineStatus;
 	};
 }
 

@@ -3,6 +3,13 @@
 
 #include <string>
 
+enum EngineStatus
+{
+	ES_INIT = 0,
+	ES_RUN,
+	ES_SHUTDOWN
+};
+
 namespace Mavgine2
 {
 	class IEngine
@@ -18,6 +25,8 @@ namespace Mavgine2
 			virtual void Tick() = 0;
 
 			virtual double GetEngineTime() = 0;
+
+			virtual EngineStatus GetStatus() = 0;
 	};
 };
 

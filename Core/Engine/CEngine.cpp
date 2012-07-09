@@ -1,6 +1,7 @@
 #include "CEngine.h"
 
-Mavgine2::CEngine::CEngine() : m_uiTickRate(0), m_engineStartClock(clock())
+Mavgine2::CEngine::CEngine() : m_uiTickRate(0), m_engineStartClock(clock()),
+	m_engineStatus(ES_INIT)
 {
 }
 
@@ -11,6 +12,7 @@ Mavgine2::CEngine::~CEngine()
 void Mavgine2::CEngine::Initialize(const std::string &strGameName, const unsigned int uiTickRate)
 {
 	m_uiTickRate = uiTickRate;
+	m_engineStatus = ES_RUN;
 }
 
 void Mavgine2::CEngine::EndGame()
@@ -52,4 +54,9 @@ void Mavgine2::CEngine::Tick()
 double Mavgine2::CEngine::GetEngineTime()
 {
 	return double(clock() - m_engineStartClock)/double(CLOCKS_PER_SEC);
+}
+
+EngineStatus Mavgine2::CEngine::GetStatus()
+{
+	return m_engineStatus;
 }
