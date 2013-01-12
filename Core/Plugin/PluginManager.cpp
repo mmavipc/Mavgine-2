@@ -2,15 +2,10 @@
 #include <Mavgine2\Static-Lib\OSAbstraction.h>
 #include <Mavgine2\Core\Core.h>
 
-Mavgine2::PluginManager *g_pluginMgr = NULL;
-
 Mavgine2::PluginManager* Mavgine2::PluginManager::GetSingleton()
 {
-	if(g_pluginMgr == NULL)
-	{
-		g_pluginMgr = new Mavgine2::PluginManager();
-	}
-	return g_pluginMgr;
+	static Mavgine2::PluginManager* pluginMgr = new Mavgine2::PluginManager;
+	return pluginMgr;
 }
 
 Mavgine2::PluginManager::PluginManager()
