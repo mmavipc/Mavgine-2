@@ -41,23 +41,23 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CoreExport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Plugin\Plugin.h">
-      <Filter>Header Files\Plugin</Filter>
-    </ClInclude>
     <ClInclude Include="Plugin\PluginManager.h">
       <Filter>Header Files\Plugin</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\IEngine.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\CEngine.h">
       <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Includes\Mavgine2\Core\IEngine.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Includes\Mavgine2\Core\Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Includes\Mavgine2\Core\CoreExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Includes\Mavgine2\Core\Plugin.h">
+      <Filter>Header Files\Plugin</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

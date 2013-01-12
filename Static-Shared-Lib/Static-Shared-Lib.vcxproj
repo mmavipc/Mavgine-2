@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OSAbstraction\OSAbstraction.h" />
+    <ClCompile Include="OSAbstraction\OSAbstraction.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OSAbstraction\OSAbstraction.cpp" />
+    <ClInclude Include="..\Includes\Mavgine2\Static-Lib\OSAbstraction.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C52F5B94-58A7-418A-A5C2-19DA2F9395F7}</ProjectGuid>

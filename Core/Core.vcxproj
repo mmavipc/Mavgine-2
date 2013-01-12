@@ -93,11 +93,11 @@
     <ClCompile Include="Plugin\PluginManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core.h" />
-    <ClInclude Include="CoreExport.h" />
+    <ClInclude Include="..\Includes\Mavgine2\Core\Core.h" />
+    <ClInclude Include="..\Includes\Mavgine2\Core\CoreExport.h" />
+    <ClInclude Include="..\Includes\Mavgine2\Core\IEngine.h" />
+    <ClInclude Include="..\Includes\Mavgine2\Core\Plugin.h" />
     <ClInclude Include="Engine\CEngine.h" />
-    <ClInclude Include="Engine\IEngine.h" />
-    <ClInclude Include="Plugin\Plugin.h" />
     <ClInclude Include="Plugin\PluginManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

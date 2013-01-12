@@ -21,13 +21,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OSAbstraction\OSAbstraction.h">
-      <Filter>Header Files\OS Abstraction</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="OSAbstraction\OSAbstraction.cpp">
       <Filter>Source Files\OS Abstraction</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Includes\Mavgine2\Static-Lib\OSAbstraction.h">
+      <Filter>Header Files\OS Abstraction</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
