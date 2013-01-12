@@ -1,9 +1,9 @@
 // Test-Implementation.cpp : Defines the entry point for the console application.
 //
 
-#include <Core\Core.h>
-#include <Core\Engine\IEngine.h>
-#include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
+#include <Mavgine2/Core/Core.h>
+#include <Mavgine2\Core\IEngine.h>
+#include <Mavgine2\Static-Lib\OSAbstraction.h>
 
 #ifdef _WIN32
 #include <Windows.h>

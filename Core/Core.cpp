@@ -1,9 +1,9 @@
 // Core.cpp : Defines the exported functions for the DLL application.
 //
 
-#include "Core.h"
+#include <Mavgine2\Core\Core.h>
 #include "Engine\CEngine.h"
-#include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
+#include <Mavgine2\Static-Lib\OSAbstraction.h>
 
 Mavgine2::CEngine* g_engine = NULL;
 

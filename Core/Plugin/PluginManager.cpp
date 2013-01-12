@@ -1,6 +1,6 @@
 #include "PluginManager.h"
-#include <Static-Shared-Lib\OSAbstraction\OSAbstraction.h>
-#include "..\Core.h"
+#include <Mavgine2\Static-Lib\OSAbstraction.h>
+#include <Mavgine2\Core\Core.h>
 
 Mavgine2::PluginManager *g_pluginMgr = NULL;
 

@@ -4,7 +4,7 @@
 #define WIN32_LAN_AND_MEAN
 #include <Windows.h>
 
-#include "..\Core\Plugin\Plugin.h"
+#include <Mavgine2\Core\Plugin.h>
 
 class DummyPlugin : public Mavgine2::Plugin
 {

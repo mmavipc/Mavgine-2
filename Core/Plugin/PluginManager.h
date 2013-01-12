@@ -4,7 +4,7 @@
 #error You are not supposed to include this H file, EVER.
 #endif
 
-#include "Plugin.h"
+#include <Mavgine2\Core\Plugin.h>
 #include <vector>
 
 namespace Mavgine2

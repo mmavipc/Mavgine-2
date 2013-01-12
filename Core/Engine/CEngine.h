@@ -3,10 +3,9 @@
 
 #include <string>
 #include <ctime>
-#include "IEngine.h"
-#include "..\Core.h"
+#include <Mavgine2\Core\IEngine.h>
+#include <Mavgine2\Core\Core.h>
 #include "..\Plugin\PluginManager.h"
-
 namespace Mavgine2
 {
 	class CEngine : public IEngine

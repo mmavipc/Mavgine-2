@@ -8,3 +8,7 @@ Release/
 *.sdf
 *.opensdf
 *.ipch
+
+#dependencies
+!Dependencies/Readme.txt
+Dependencies/*
