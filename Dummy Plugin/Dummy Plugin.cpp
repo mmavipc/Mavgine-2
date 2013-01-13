@@ -79,13 +79,8 @@ class DummyPlugin : public Mavgine2::Plugin
 		bool m_bWaitingForLock;
 };
 
-DummyPlugin *g_Dummy = NULL;
-
 extern "C" __declspec(dllexport) Mavgine2::Plugin* PluginInit(Mavgine2::IEngine *pEngine)
 {
-	if(!g_Dummy)
-	{
-		g_Dummy = new DummyPlugin(pEngine);
-	}
-	return g_Dummy;
+	static DummyPlugin *s_plugin = new DummyPlugin(pEngine);
+	return s_plugin;
 }
